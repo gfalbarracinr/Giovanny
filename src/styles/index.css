@@ -1,0 +1,13 @@
+* {
+    background-color: #F6F6F6;
+}
+
+.li-header > a{
+    color: #190D0E;
+}
+.li-header{
+    color: #190D0E;
+}
+.li-header > a:hover{
+    color: #B7B7B9;
+}
