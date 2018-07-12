@@ -10,6 +10,14 @@ const Wrapper = styled.div`
   max-width: 960;
   padding: 0px 1.0875rem 1.45rem;
   padding-top: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.8fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header header"
+                       "education experience"
+                       "softSkill hardSkill"
+                       "reference languages"
+                       "footer footer";
 `
 
 const Layout = ({ children, data }) => (
@@ -27,9 +35,7 @@ const Layout = ({ children, data }) => (
       email={data.site.siteMetadata.email}
       cel={data.site.siteMetadata.cel}
     />
-    <div>
-      {children()}
-    </div>
+    {children()}
   </Wrapper>
 )
 

@@ -5,6 +5,7 @@ import '../styles/index.css';
 
 
 const Wrapper = styled.div`
+  grid-area: header;
   margin-bottom: 1.45rem;
   margin-left: 5%;
   margin-right: 5%;
