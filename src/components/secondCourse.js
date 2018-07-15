@@ -36,16 +36,17 @@ const Decoration = styled.div`
     margin-top: 0;
     margin-right: 4%;
 `
-export default () =>
+export default ({ year, institution, degree}) =>
     <Wrapper>
         <Decoration>
             <Dot/>
         </Decoration>
         <Instituition>
-            <p>2007 - 2012</p>
-            <p> Colegio Agustiniano Norte </p>
+            <p>{ year }</p>
+            <p>{ institution }</p>
         </Instituition>
         <Degree>
-            <h6>Bachillerato</h6>
+            <h6>{ degree.career }</h6>
+            <p>{ degree.description }</p>
         </Degree>
     </Wrapper>

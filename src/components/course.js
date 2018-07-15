@@ -26,6 +26,9 @@ const Degree = styled.div`
     & *{
         margin: 0;
     }
+    @media (max-width: 850px){
+        font-size: 80%;
+    }
 `
 const Decoration = styled.div`
     display: flex;
@@ -35,19 +38,17 @@ const Decoration = styled.div`
     margin-top: 4%;
     margin-right: 4%;
 `
-export default () =>
+export default ({ year, institution, degree}) =>
     <Wrapper>
         <Decoration>
             <Dot/>
         </Decoration>
         <Instituition>
-            <p>2013 - 2019</p>
-            <p> Universidad Nacional </p>
+            <p>{year}</p>
+            <p>{institution}</p>
         </Instituition>
         <Degree>
-            <h6>Ingeniería Sistemas</h6>
-            <p>Actualmente estoy en 8
-               semestre, mi grado Octubre del
-               2019</p>
+            <h6>{degree.career}</h6>
+            <p>{degree.description}</p>
         </Degree>
     </Wrapper>

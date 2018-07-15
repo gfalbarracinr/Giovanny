@@ -1,51 +1,29 @@
 import React from 'react'
-import styled from 'styled-components'
-import Course from '../components/course';
-import SecondCourse from '../components/secondCourse';
-import LastCourse from '../components/lastCourse';
+import Education from '../components/education';
 
-const Wrapper = styled.div`
-  grid-area: education;
-  margin-bottom: 1.45rem;
-  margin-left: 5%;
-  margin-right: 5%;
-  @media (max-width: 400px) {
-    margin-left: 0;
-  }
-`
-const Education = styled.div`
-  display: flex;
-  flex-direction: column;
-
-`
-
-const Title = styled.div`
- margin-left: 10%;
- display: flex;
- 
- 
- & > hr{
-   background-color: #190D0E;
-   width: 60%;
-   color: #190D0E;
-   margin-left: 10%;
-   margin-top: 2%;
-   border: 1px solid #190D0E;
- }
-`
-
-const IndexPage = () => (
-  <Wrapper>
-    <Education>
-      <Title>
-        <h2>EDUCACIÓN</h2>
-        <hr/>
-      </Title>
-      <Course/>
-      <SecondCourse/>
-      <LastCourse/>
-    </Education>
-  </Wrapper>
-)
+const IndexPage = ({data}) =>{
+  const courses = data.allEducationJson.edges;
+  const firstCourse = courses.shift();
+  const lastCourse = courses.pop();
+  return(
+  <Education firstCourse = { firstCourse.node } lastCourse = { lastCourse.node } courses = { courses }/>
+  )
+}
 
 export default IndexPage
+export const query = graphql`
+  query TitleQuery {
+    allEducationJson{
+      edges{
+        node{
+          year
+          institution
+          degree{
+            career
+            description
+          }
+        }
+      }
+    }
+  }
+`

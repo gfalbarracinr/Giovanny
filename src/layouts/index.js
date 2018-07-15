@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
 import Header from '../components/header'
-import styled from 'styled-components';
+import styled from 'styled-components'
+import Helmet from 'react-helmet'
 import '../styles/index.css';
 
 const Wrapper = styled.div`
@@ -18,27 +18,38 @@ const Wrapper = styled.div`
                        "softSkill hardSkill"
                        "reference languages"
                        "footer footer";
+  @media (max-width: 850px) {
+    grid-template-areas: "header header"
+                         "education education"
+                         "softSkill softSkill"
+                         "hardSkill hardSkill"
+                         "reference reference"
+                         "languages languages"
+                         "footer footer";
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
 `
 
-const Layout = ({ children, data }) => (
-  <Wrapper>
-    <Helmet
-      title={data.site.siteMetadata.name}
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-    <Header name={data.site.siteMetadata.name} 
-      image={data.site.siteMetadata.image}
-      link={data.site.siteMetadata.link}
-      email={data.site.siteMetadata.email}
-      cel={data.site.siteMetadata.cel}
-    />
-    {children()}
-  </Wrapper>
-)
-
+const Layout = ({children, data}) =>{ 
+  return(
+    <Wrapper>
+      <Helmet
+        title={data.site.siteMetadata.name}
+        meta={[
+          { name: 'description', content: 'Sample' },
+          { name: 'keywords', content: 'sample, something' },
+        ]}
+      />
+      <Header name={data.site.siteMetadata.name} 
+        image={data.site.siteMetadata.image}
+        link={data.site.siteMetadata.link}
+        email={data.site.siteMetadata.email}
+        cel={data.site.siteMetadata.cel}
+      />
+      {children()}
+    </Wrapper>
+  )
+}
 Layout.propTypes = {
   children: PropTypes.func,
 }
@@ -46,14 +57,14 @@ Layout.propTypes = {
 export default Layout
 
 export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
+  query SiteQueryJson {
+    site{
+      siteMetadata{
+        email
         name
         image
-        link
-        email
         cel
+        link
       }
     }
   }

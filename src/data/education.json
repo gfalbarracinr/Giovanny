@@ -1,0 +1,30 @@
+[
+    {
+        "year": "2013 - 2019",
+        "institution": "Universidad Nacional",
+        "degree": {
+            "career": "Ingeniería Sistemas",
+            "description": "Actualmente estoy en 8 semestre, mi grado: Octubre del 2019"
+        }
+    },
+
+    {
+        "year": "2007 - 2012",
+        "institution": "Colegio Agustiniano Norte",
+        "degree": {
+            "career": "Bachillerato",
+            "description": ""
+        }
+    },
+
+    {
+        "year": "2002 - 2007",
+        "institution": "Colegio Agustiniano Norte",
+        "degree": {
+            "career": "Primaria",
+            "description": ""
+        }
+    }
+
+
+]
