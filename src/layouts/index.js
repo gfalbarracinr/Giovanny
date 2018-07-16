@@ -10,24 +10,6 @@ const Wrapper = styled.div`
   max-width: 960;
   padding: 0px 1.0875rem 1.45rem;
   padding-top: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.8fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: "header header"
-                       "education experience"
-                       "softSkill hardSkill"
-                       "reference languages"
-                       "footer footer";
-  @media (max-width: 850px) {
-    grid-template-areas: "header header"
-                         "education education"
-                         "softSkill softSkill"
-                         "hardSkill hardSkill"
-                         "reference reference"
-                         "languages languages"
-                         "footer footer";
-    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  }
 `
 
 const Layout = ({children, data}) =>{ 
