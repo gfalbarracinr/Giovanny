@@ -38,6 +38,8 @@ const IndexPage = (props) => {
   const firstJob = jobs[0].node;
   const lastJob = jobs[(jobs.length) - 1].node;
 
+  const softSkills = data.allSoftskillJson.edges;
+
   return(
 
     <Wrapper>
@@ -53,7 +55,7 @@ const IndexPage = (props) => {
         lastJob = { lastJob } 
       />
 
-      <SoftSkill />
+      <SoftSkill softSkills = { softSkills } />
     </Wrapper>
   );
 }
@@ -72,6 +74,13 @@ export const query = graphql`
       edges{
         node{
           ...experienceQuery
+        }
+      }
+    }
+    allSoftskillJson{
+      edges{
+        node{
+          ...softSkillQuery
         }
       }
     }

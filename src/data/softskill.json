@@ -1,0 +1,31 @@
+[
+    {
+        "skill": "Trabajo en grupo",
+        "percentage": "95"
+    },
+
+    {
+        "skill": "Comunicación",
+        "percentage": "95"
+    },
+
+    {
+        "skill": "Organización",
+        "percentage": "90"
+    },
+
+    {
+        "skill": "Empatía",
+        "percentage": "90"
+    },
+
+    {
+        "skill": "Puntualidad",
+        "percentage": "30"
+    },
+    
+    {
+        "skill": "Emprendimiento",
+        "percentage": "90"
+    }
+]
