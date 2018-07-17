@@ -18,7 +18,12 @@ const Instituition = styled.div`
     & *{
         margin: 0;
     }
-
+    width: 110px;
+    @-moz-document url-prefix() {
+        & {
+            font-size: 80%;
+        }
+    }
 `
 const Degree = styled.div`
     margin-left: 15%;
@@ -26,9 +31,19 @@ const Degree = styled.div`
     & *{
         margin: 0;
     }
-    @media (max-width: 850px){
+    @media (max-width: 500px){
         font-size: 80%;
+        & > p{
+            font-size: 80%;
+        }
     }
+    @-moz-document url-prefix() {
+        & {
+            font-size: 80%;
+        }
+    }
+
+    width:40%;
 `
 const Decoration = styled.div`
     display: flex;

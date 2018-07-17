@@ -41,13 +41,7 @@ export default Layout
 export const query = graphql`
   query SiteQueryJson {
     site{
-      siteMetadata{
-        email
-        name
-        image
-        cel
-        link
-      }
+      ...headerQuery
     }
   }
 `

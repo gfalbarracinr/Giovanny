@@ -22,8 +22,8 @@ class Item extends Component {
           <div>
             <FirstItem year={first.year} institution={first.institution} degree={first.degree}/>
             {          
-              this.state.itemsArray.map((course, index) => (
-                <GeneralItem key={ index } year={course.node.year} institution={course.node.institution} degree={course.node.degree}/>
+              this.state.itemsArray.map((item, index) => (
+                <GeneralItem key={ index } year={item.node.year} institution={item.node.institution} degree={item.node.degree}/>
               ))
               
             }

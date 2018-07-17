@@ -1,0 +1,29 @@
+[
+    {
+        "year": "2014",
+        "institution": "Latinoamericana de Proyectos",
+        "degree": {
+            "career": "Asistente Contable",
+            "description": "Encargado del software de facturación contable HELISA Trabajo Vacacional"
+        }
+    },
+
+    {
+        "year": "2015 - 2017",
+        "institution": "AAIC SAS",
+        "degree": {
+            "career": "Digitador",
+            "description": "Encargado de digitar y criticar encuestas con herramientas Office. Vacacional"
+        }
+    },
+
+    {
+        "year": "-",
+        "institution": "Trabajos varios",
+        "degree": {
+            "career": "Asistente",
+            "description": "He desempeñado diferente tipos de trabajos como asistente en empresas como: Ismocol o Latinproyectos"
+        }
+    }
+
+]

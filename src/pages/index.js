@@ -34,6 +34,10 @@ const IndexPage = (props) => {
   const firstCourse = courses[0].node;
   const lastCourse = courses[(courses.length - 1)].node;
 
+  const jobs = data.allExperienceJson.edges;
+  const firstJob = jobs[0].node;
+  const lastJob = jobs[(jobs.length) - 1].node;
+
   return(
 
     <Wrapper>
@@ -44,9 +48,9 @@ const IndexPage = (props) => {
       />
 
       <Experience 
-        firstJob = { firstCourse }
-        jobs = { courses } 
-        lastJob = { lastCourse } 
+        firstJob = { firstJob }
+        jobs = { jobs } 
+        lastJob = { lastJob } 
       />
 
       <SoftSkill />
@@ -56,16 +60,18 @@ const IndexPage = (props) => {
 
 export default IndexPage
 export const query = graphql`
-  query TitleQuery {
+  query Query {
     allEducationJson{
       edges{
         node{
-          year
-          institution
-          degree{
-            career
-            description
-          }
+          ...educationQuery
+        }
+      }
+    }
+    allExperienceJson{
+      edges{
+        node{
+          ...experienceQuery
         }
       }
     }

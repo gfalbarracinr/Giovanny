@@ -19,13 +19,31 @@ const Instituition = styled.div`
     & *{
         margin: 0;
     }
-    max-width: 110px;
+    width: 110px;
+
+    @-moz-document url-prefix() {
+        & {
+            font-size: 80%;
+        }
+    }
 `
 const Degree = styled.div`
     margin-left: 15%;
     color: black;
     & *{
         margin: 0;
+    }
+    width: 40%;
+    @media (max-width: 500px){
+        font-size: 80%;
+        & > p{
+            font-size: 80%;
+        }
+    }
+    @-moz-document url-prefix() {
+        & {
+            font-size: 80%;
+        }
     }
 `
 const Decoration = styled.div`
