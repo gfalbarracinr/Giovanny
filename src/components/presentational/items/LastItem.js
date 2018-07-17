@@ -25,6 +25,12 @@ const Instituition = styled.div`
         & {
             font-size: 80%;
         }
+        @media (max-width: 400px){
+            font-size: 75%;
+            & *{
+            font-size: 75%;
+            }
+        }
     }
 `
 const Degree = styled.div`
@@ -43,6 +49,12 @@ const Degree = styled.div`
     @-moz-document url-prefix() {
         & {
             font-size: 80%;
+        }
+        @media (max-width: 400px){
+            font-size: 75%;
+            & *{
+            font-size: 75%;
+            }
         }
     }
 `
