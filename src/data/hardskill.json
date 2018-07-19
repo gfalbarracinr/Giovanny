@@ -1,0 +1,32 @@
+[
+    { 
+        "label": "JAVA",
+        "value": 9,
+        "color": "#4AB3F4"
+    },
+    { 
+        "label": "REACT JS",
+        "value": 8,
+        "color": "#4AB3F4"
+    },
+    { 
+        "label": "CSS3",
+        "value": 5,
+        "color": "#4AB3F4"
+    },
+    { 
+        "label": "HTML5",
+        "value": 6,
+        "color": "#4AB3F4"
+    },
+    { 
+        "label": "CPP",
+        "value": 5,
+        "color": "#4AB3F4"
+    },
+    { 
+        "label": "PYTHON",
+        "value": 2,
+        "color": "#4AB3F4"
+    }
+]

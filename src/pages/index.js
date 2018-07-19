@@ -3,6 +3,9 @@ import Education from '../components/presentational/Education';
 import Experience from '../components/presentational/Experience';
 import SoftSkill from '../components/presentational/SoftSkill';
 import styled from 'styled-components';
+import HardSkill from '../components/presentational/HardSkill';
+import Languages from '../components/presentational/Languages';
+import Footer from '../components/presentational/Footer';
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -11,20 +14,19 @@ const Wrapper = styled.div`
   padding-top: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 0.8fr 0.2fr;
   grid-template-areas: "education experience"
                        "softSkill hardSkill"
-                       "reference languages"
+                       "languages languages"
                        "footer footer";
   @media (max-width: 850px) {
     grid-template-areas: "education education"
                          "experience experience"
                          "softSkill softSkill"
                          "hardSkill hardSkill"
-                         "reference reference"
                          "languages languages"
                          "footer footer";
-    grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr 1fr 0.8fr 0.2fr;
   }
 `
 const IndexPage = (props) => {
@@ -39,6 +41,12 @@ const IndexPage = (props) => {
   const lastJob = jobs[(jobs.length) - 1].node;
 
   const softSkills = data.allSoftskillJson.edges;
+
+  const hardSkills = data.allHardskillJson.edges;
+
+  const lans = data.allLanguagesJson.edges;
+  const firstLan = lans[0].node;
+  const lastLan = lans[(lans.length) - 1].node;
 
   return(
 
@@ -56,6 +64,13 @@ const IndexPage = (props) => {
       />
 
       <SoftSkill softSkills = { softSkills } />
+      <HardSkill hardSkills = { hardSkills }/>
+      <Languages
+        firstLan = { firstLan }
+        lans = { lans } 
+        lastLan = { lastLan } 
+      />
+      <Footer/>
     </Wrapper>
   );
 }
@@ -81,6 +96,20 @@ export const query = graphql`
       edges{
         node{
           ...softSkillQuery
+        }
+      }
+    }
+    allHardskillJson{
+      edges{
+        node{
+          ...hardSkillQuery
+        }
+      }
+    }
+    allLanguagesJson{
+      edges{
+        node{
+          ...languageQuery
         }
       }
     }

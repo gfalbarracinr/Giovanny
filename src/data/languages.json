@@ -1,0 +1,20 @@
+[
+    {
+        "year": "Inglés",
+        "institution": "Nivel: B2",
+        "degree": {
+            "career": "",
+            "description": ""
+        }
+    },
+
+    {
+        "year": "Español",
+        "institution": "Nativo",
+        "degree": {
+            "career": "",
+            "description": ""
+        }
+    }
+
+]

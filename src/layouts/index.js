@@ -21,7 +21,9 @@ const Layout = ({children, data}) =>{
           { name: 'description', content: 'Sample' },
           { name: 'keywords', content: 'sample, something' },
         ]}
-      />
+      >
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+      </Helmet>
       <Header name={data.site.siteMetadata.name} 
         image={data.site.siteMetadata.image}
         link={data.site.siteMetadata.link}
