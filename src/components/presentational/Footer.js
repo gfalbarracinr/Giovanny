@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import FontAwesome from 'react-fontawesome';
+import { withRouter } from 'react-router-dom';
+import store from '../../store';
 
 const Wrapper = styled.div`
   grid-area: footer;
@@ -16,7 +18,7 @@ const Wrapper = styled.div`
 
 const Button = styled.button`
   text-align: center;
-  margin-left: 48%;
+  margin-left: 45%;
   background-color: black;
   color: white;
   border: 1px bisque white;
@@ -28,6 +30,10 @@ const Button = styled.button`
   &:hover{
       width:125px;
       height: 35px;
+  }
+
+  @media(max-width: 500px){
+      margin-left: 35%;
   }
 `
 const Acknowledge = styled.div`
@@ -47,33 +53,45 @@ const Link = styled.a`
     }
     
 `
-const Footer = () => {
-    return (
-        <Wrapper>
-            <Button> Ver Portafolio</Button>
-            <Acknowledge>
-                <p>Giovanny Albarracín</p>
-                <Link href="https://twitter.com/GioAlbarracin">
-                    <FontAwesome
-                        className="super-crazy-colors"
-                        name="twitter"
-                        size="lg"
-                        style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)', marginRight: '5px' }}
-                    />
-                    Twitter
-                </Link>
-                <Link href="https://github.com/gfalbarracinr">
-                    <FontAwesome
-                        className="super-crazy-colors"
-                        name= "github"
-                        size="lg"
-                        style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)', marginRight: '5px' }}
-                    />
-                    Github
-                </Link>
-            </Acknowledge>
-        </Wrapper>
-    );
+class Footer extends Component {
+    constructor(props){
+        super(props);
+        this.state={
+            visible: false
+        }
+
+        store.subscribe(() =>{
+            this.setState({ visible: store.getState().visible })
+        })
+    }
+    render(){
+        return (
+            <Wrapper>
+                <Button onClick={() =>{ this.state.visible ? this.props.history.push('/') : this.props.history.push('/portfolio')} }> {this.state.visible ? 'Ver CV': 'Ver Portafolio'}</Button>
+                <Acknowledge>
+                    <p>Giovanny Albarracín</p>
+                    <Link href="https://twitter.com/GioAlbarracin">
+                        <FontAwesome
+                            className="super-crazy-colors"
+                            name="twitter"
+                            size="lg"
+                            style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)', marginRight: '5px' }}
+                        />
+                        Twitter
+                    </Link>
+                    <Link href="https://github.com/gfalbarracinr">
+                        <FontAwesome
+                            className="super-crazy-colors"
+                            name= "github"
+                            size="lg"
+                            style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)', marginRight: '5px' }}
+                        />
+                        Github
+                    </Link>
+                </Acknowledge>
+            </Wrapper>
+        );
+    }
 };
 
-export default Footer;
+export default withRouter(Footer);

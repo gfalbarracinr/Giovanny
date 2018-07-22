@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components';
+import Store from '../store';
 import '../styles/index.css';
 
 
@@ -112,51 +113,73 @@ const About = styled.div`
   grid-area: about;
 
   & > p{
+    display: ${ props => !props.portfolio ? 'inherit' : 'none'};
     margin-left: 10%;
     text-align: justify;
     margin-right: 5%;
     margin-top: 3%;
   }
-
+  & > h1{
+    display: ${ props => props.portfolio ? 'inherit' : 'none'};
+    margin-left: calc(100% - 230px);
+    text-align: justify;
+    margin-right: 5%;
+    margin-top: 5%;
+  }
   @media (max-width: 770px) {
     display: none;
   }
-
 `
-const Header = ({ name, image, link, cel, email }) => (
-  <Wrapper>
-    
-    <WrapperHeader>
-    <Img src={image}/>
-      <TextHeader>
-        <Link to="/">
-          {name}
-        </Link>
-      </TextHeader>
-      <Career>
-       <p>Ing de Sistemas y Computación</p>
-      </Career>
-      <InfoDiv>
-        <Info>
-          <li className="li-header"><a href={`mailto:${email}`}>{email}</a></li>
-          <li style={{ marginLeft: '20%'}}><p>{cel}</p></li>
-        </Info>
-        <Info>
-          <li className="li-header"><a href={`https://${link}`}>{link}</a></li>
-          <li className="li-header" style={{ marginLeft: '24%'}}><a target="_blank" href="https://docs.wixstatic.com/ugd/e3f3f6_88f193b2b80244c8886e10234569f5a7.pdf" download>Descargar PDF</a></li>
-        </Info>
-      </InfoDiv>
-      <About>
-        <p>
-            Soy estudiante, desarrollador web e
-            ingeniero de sistemas. Actualmente
-            estoy viviendo en Bogotá. Me interesa la
-            tecnología y la programación también
-            me gusta el fútbol y la música
-        </p>
-      </About>
-    </WrapperHeader>
-  </Wrapper>
-)
+
+class Header extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      portfolio: false
+    }
+    Store.subscribe(() => {
+      this.setState({ portfolio: Store.getState().visible });
+    });
+
+  };
+  render(){
+    const { name, image, link, cel, email } = this.props;
+    return(
+      <Wrapper>
+        <WrapperHeader>
+        <Img src={image}/>
+          <TextHeader>
+            <Link to="/">
+              {name}
+            </Link>
+          </TextHeader>
+          <Career>
+          <p>Ing de Sistemas y Computación</p>
+          </Career>
+          <InfoDiv>
+            <Info>
+              <li className="li-header"><a href={`mailto:${email}`}>{email}</a></li>
+              <li style={{ marginLeft: '20%'}}><p>{cel}</p></li>
+            </Info>
+            <Info>
+              <li className="li-header"><a href={`https://${link}`}>{link}</a></li>
+              <li className="li-header" style={{ marginLeft: '24%'}}><a target="_blank" href="https://docs.wixstatic.com/ugd/e3f3f6_88f193b2b80244c8886e10234569f5a7.pdf" download>Descargar PDF</a></li>
+            </Info>
+          </InfoDiv>
+          <About portfolio = { this.state.portfolio }>
+            <h1>PORTAFOLIO</h1>
+            <p>
+                Soy estudiante, desarrollador web e
+                ingeniero de sistemas. Actualmente
+                estoy viviendo en Bogotá. Me interesa la
+                tecnología y la programación también
+                me gusta el fútbol y la música
+            </p>
+          </About>
+        </WrapperHeader>
+      </Wrapper>
+    )
+  }
+}
 
 export default Header

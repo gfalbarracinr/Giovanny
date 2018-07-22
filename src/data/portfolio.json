@@ -1,0 +1,28 @@
+[
+    {
+        "projects":[   
+    
+            {
+                "url": "https://gfalbarracinr.github.io/Bulldogs-/",
+                "image": "bulldog", 
+                "title": "Club Bulldogs Bogotá", 
+                "text": "Pagina web para el Club Bulldogs Bogotá, se puede observar la landing page (MockUp)"
+            },
+            
+            {
+                "url": "https://gfalbarracinr.github.io/observatorio/",
+                "image": "observatorio",
+                "title": "Observatorio De Diseño", 
+                "text": "Pagina web para el Observatorio de Diseño de la Universidad Nacional (MockUp)"
+            }
+    
+    
+        ],
+    
+        "main":{
+            "url": "https://whitepageapp.herokuapp.com/info",
+            "title": "The White Page", 
+            "text": "Proyecto The White Page, donde se quiere mostrar el trabajo de John Cage en la web, realizando una plataforma donde el espectador sea el protagonista"
+        }
+    }
+]
