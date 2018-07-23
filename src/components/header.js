@@ -163,7 +163,7 @@ class Header extends Component {
             </Info>
             <Info>
               <li className="li-header"><a href={`https://${link}`}>{link}</a></li>
-              <li className="li-header" style={{ marginLeft: '24%'}}><a target="_blank" href="https://docs.wixstatic.com/ugd/e3f3f6_88f193b2b80244c8886e10234569f5a7.pdf" download>Descargar PDF</a></li>
+              <li className="li-header" style={{ marginLeft: '24%'}}><a target="_blank" href="https://docs.wixstatic.com/ugd/e3f3f6_ab01c4f91ccf48bebf2d174d749dffdf.pdf" download>Descargar PDF</a></li>
             </Info>
           </InfoDiv>
           <About portfolio = { this.state.portfolio }>
