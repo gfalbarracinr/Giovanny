@@ -6,7 +6,6 @@ const Wrapper = styled.div`
     margin-right: 10%;
     @media (max-width: 500px) {
         margin-right: 0;
-        margin-left: -35%;
         
     }
 `
@@ -15,8 +14,17 @@ class BubbleChartClass extends Component {
     constructor(props){
         super(props);
         this.state={
-            media: 400,
+            mobile: false,
         }
+    }
+
+    componentDidMount() {
+        window.addEventListener("resize", this.resize.bind(this));
+        this.resize();
+    }
+    
+    resize() {
+        this.setState({mobile: window.innerWidth <= 560});
     }
     render () {
         const BubbleChart = require("@weknow/react-bubble-chart-d3");
@@ -28,8 +36,8 @@ class BubbleChartClass extends Component {
                         offsetX: 0,
                         offsetY: 0,
                     }}
-                    width = { this.state.media }
-                    height = { this.state.media }
+                    width = { this.state.mobile ? '250' : '400' }
+                    height = { this.state.mobile ? '250' : '400' }
                     showLegend={false} 
                     legendPercentage={0} 
                     legendFont={{
