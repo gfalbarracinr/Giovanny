@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import BubbleChart from '@weknow/react-bubble-chart-d3';
 import styled from 'styled-components';
-import {withGetScreen} from 'react-getscreen';
 
 const Wrapper = styled.div`
     margin-left: 10%;
     margin-right: 10%;
     @media (max-width: 500px) {
         margin-right: 0;
-        margin-left: 0;
+        margin-left: -35%;
+        
     }
 `
 
@@ -16,15 +15,11 @@ class BubbleChartClass extends Component {
     constructor(props){
         super(props);
         this.state={
-            media: 400
-        }
-    }
-    componentDidMount(){
-        if (this.props.isMobile()){
-            this.setState({ media: 250 })
+            media: 400,
         }
     }
     render () {
+        const BubbleChart = require("@weknow/react-bubble-chart-d3");
         return(
             <Wrapper>
                 <BubbleChart
@@ -64,4 +59,4 @@ class BubbleChartClass extends Component {
     }
 }
 
-export default withGetScreen(BubbleChartClass);
+export default BubbleChartClass;
