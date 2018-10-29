@@ -39,42 +39,30 @@ class IndexPage extends Component  {
   render(){
     const { data } = this.props;
     const courses = data.allEducationJson.edges;
-    const firstCourse = courses[0].node;
-    const lastCourse = courses[(courses.length - 1)].node;
 
     const jobs = data.allExperienceJson.edges;
-    const firstJob = jobs[0].node;
-    const lastJob = jobs[(jobs.length) - 1].node;
-
+    
     const softSkills = data.allSoftskillJson.edges;
 
     const hardSkills = data.allHardskillJson.edges;
 
     const lans = data.allLanguagesJson.edges;
-    const firstLan = lans[0].node;
-    const lastLan = lans[(lans.length) - 1].node;
 
     return(
 
       <Wrapper>
         <Education 
-          firstCourse = { firstCourse } 
           courses = { courses }
-          lastCourse = { lastCourse } 
         />
 
         <Experience 
-          firstJob = { firstJob }
           jobs = { jobs } 
-          lastJob = { lastJob } 
         />
 
         <SoftSkill softSkills = { softSkills } />
         <HardSkill hardSkills = { hardSkills }/>
         <Languages
-          firstLan = { firstLan }
           lans = { lans } 
-          lastLan = { lastLan } 
         />
         <Footer/>
       </Wrapper>

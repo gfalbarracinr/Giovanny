@@ -20,12 +20,12 @@ const Wrapp = styled.div`
 `
 
 const Experience = (props) => {
-      const {firstJob, lastJob, jobs} = props 
+      const {jobs} = props 
       return(
         <Wrapper>
           <Wrapp>
             <Title title="EXPERIENCIA"/>
-            <Item first={firstJob} last={lastJob} items={jobs}/>
+            <Item items={jobs}/>
           </Wrapp>
         </Wrapper>
       )
