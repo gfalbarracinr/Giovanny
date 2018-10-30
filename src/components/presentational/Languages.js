@@ -22,11 +22,11 @@ const Wrapp = styled.div`
   flex-direction: column;
 
 `
-const Languages = ({ lans }) => {
+const Languages = ({ lans, title }) => {
     return (
         <Wrapper>
             <Wrapp>
-            <Title title="IDIOMAS" h="2"/>
+            <Title title={title} h="2"/>
             <Item items={lans}/>
           </Wrapp>
         </Wrapper>

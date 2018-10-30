@@ -27,30 +27,39 @@ const Div = styled.div`
   flex-wrap: wrap;
 `
 class portfolio extends Component {
-    
+    constructor(props){
+        super(props);
+        this.state ={
+            language: 'es'
+        }
+        store.subscribe(() => {
+            this.setState({ language: store.getState().language });
+        });
+    };
     componentDidMount(){
         store.dispatch(setHeader(true))
     }
 
     render() {
         const data = this.props.data.allPortfolioJson.edges[0].node
+        console.log(data);
         return (
             <Wrapper>
                 <MainProject
                     url = { data.main.url }
                     title = { data.main.title }
-                    text = { data.main.text }
+                    text = { this.state.language === 'es' ? data.main.text : data.main.message }
                 />
                 <Div>
                     {
                         data.projects.map((project, index) =>(
-
+ 
                             <Projects
                                 key={ index } 
                                 url={ project.url }
                                 image={ project.image } 
                                 title={ project.title }
-                                text={ project.text }
+                                text={ this.state.language === 'es' ? project.text : project.message }
                             />
                         ))
                     }

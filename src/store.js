@@ -7,6 +7,11 @@ const reducer = (state, action) => {
             ...state,
             visible: action.visible
         }
+    }else if (action.type === 'SET_LANGUAGE'){
+        return{
+            ...state,
+            language: action.language
+        }
     }
     
     return state;
@@ -14,4 +19,4 @@ const reducer = (state, action) => {
 
 
 
-export default createStore(reducer, { visible: true });
+export default createStore(reducer, { visible: true, language: 'es' });

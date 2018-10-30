@@ -1,31 +1,72 @@
 [
     {
         "skill": "Trabajo en grupo",
-        "percentage": "95"
+        "percentage": "95",
+        "language": "es"
     },
 
     {
         "skill": "Comunicación",
-        "percentage": "95"
+        "percentage": "95",
+        "language": "es"
     },
 
     {
         "skill": "Organización",
-        "percentage": "90"
+        "percentage": "90",
+        "language": "es"
     },
 
     {
         "skill": "Empatía",
-        "percentage": "90"
+        "percentage": "90",
+        "language": "es"
     },
 
     {
         "skill": "Puntualidad",
-        "percentage": "50"
+        "percentage": "80",
+        "language": "es"
     },
     
     {
         "skill": "Emprendimiento",
-        "percentage": "90"
+        "percentage": "90",
+        "language": "es"
+    },
+    {
+        "skill": "Team work",
+        "percentage": "95",
+        "language": "en"
+    },
+
+    {
+        "skill": "Comunication",
+        "percentage": "95",
+        "language": "en"
+    },
+
+    {
+        "skill": "Organization",
+        "percentage": "90",
+        "language": "en"
+    },
+
+    {
+        "skill": "Empathy",
+        "percentage": "90",
+        "language": "en"
+    },
+
+    {
+        "skill": "Punctuality",
+        "percentage": "80",
+        "language": "en"
+    },
+    
+    {
+        "skill": "Entrepreneurship",
+        "percentage": "90",
+        "language": "en"
     }
 ]

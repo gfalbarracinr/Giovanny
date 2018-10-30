@@ -6,6 +6,7 @@ export const experienceQuery = graphql`
             career
             description
         }
+        language
     }
 
 

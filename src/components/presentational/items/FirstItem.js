@@ -67,17 +67,22 @@ const Decoration = styled.div`
     margin-top: 4%;
     margin-right: 4%;
 `
-export default ({ year, institution, degree}) =>
-    <Wrapper>
-        <Decoration>
-            <Dot/>
-        </Decoration>
-        <Instituition>
-            <p>{year}</p>
-            <p>{institution}</p>
-        </Instituition>
-        <Degree>
-            <h6>{degree.career}</h6>
-            <p>{degree.description}</p>
-        </Degree>
-    </Wrapper>
+export default ({ year, institution, degree}) => {
+
+return (
+    
+        <Wrapper>
+            <Decoration>
+                <Dot/>
+            </Decoration>
+            <Instituition>
+                <p>{year}</p>
+                <p>{institution}</p>
+            </Instituition>
+            <Degree>
+                <h6>{degree.career}</h6>
+                <p>{degree.description}</p>
+            </Degree>
+        </Wrapper>
+    )
+}

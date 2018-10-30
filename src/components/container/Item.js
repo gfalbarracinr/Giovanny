@@ -9,17 +9,26 @@ class Item extends Component {
         this.state = {
           itemsArray: [],
           firstItem: {},
-          lastItem: {}
+          lastItem: {},
+          language: ''
         }
-    }
-  
+    };
+    
     componentWillMount(){
       var itemsArray = Array.from(this.props.items).reverse();
       var firstItem = itemsArray.pop().node;
       var lastItem = itemsArray.shift().node;
       this.setState({ itemsArray, firstItem, lastItem});
     }
-
+    componentDidUpdate(prevProps) {
+      if (prevProps.items !== this.props.items) {
+        var itemsArray = Array.from(this.props.items).reverse();
+        var firstItem = itemsArray.pop().node;
+        var lastItem = itemsArray.shift().node;
+        this.setState({ itemsArray, firstItem, lastItem});
+      }
+    }
+    
     render(){
       let {firstItem, lastItem, itemsArray} = this.state
       return(

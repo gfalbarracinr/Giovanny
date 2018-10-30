@@ -5,7 +5,8 @@
         "degree": {
             "career": "Asistente Contable",
             "description": "Encargado del software de facturación contable HELISA Trabajo Vacacional"
-        }
+        },
+        "language": "es"
     },
 
     {
@@ -14,7 +15,8 @@
         "degree": {
             "career": "Digitador",
             "description": "Encargado de digitar y criticar encuestas con herramientas Office. Vacacional"
-        }
+        },
+        "language": "es"
     },
 
     {
@@ -23,7 +25,37 @@
         "degree": {
             "career": "Asistente",
             "description": "He desempeñado diferente tipos de trabajos como asistente en empresas como: Ismocol o Latinproyectos"
-        }
+        },
+        "language": "es"
+    },
+    {
+        "year": "2014",
+        "institution": "Latinoamericana de Proyectos",
+        "degree": {
+            "career": "Accountancy assistant",
+            "description": "I was responsible for accountancy software HELISA. Sessional job"
+        },
+        "language": "en"
+    },
+
+    {
+        "year": "2015 - 2017",
+        "institution": "AAIC SAS",
+        "degree": {
+            "career": "Data entry",
+            "description": "I had to digit and pass surveys to the computer with Microsoft Office tools. Sessional job"
+        },
+        "language": "en"
+    },
+
+    {
+        "year": "-",
+        "institution": "Other jobs",
+        "degree": {
+            "career": "Assistant",
+            "description": "I have worked in different types of jobs as an assistant in companies such as Ismocol or LatinProyectos."
+        },
+        "language": "en"
     }
 
 ]

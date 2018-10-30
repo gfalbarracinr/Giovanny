@@ -6,6 +6,7 @@ export const educationQuery = graphql`
             career
             description
         }
+        language
     }
 
 `

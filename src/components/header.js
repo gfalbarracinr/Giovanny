@@ -135,10 +135,11 @@ class Header extends Component {
   constructor(props){
     super(props);
     this.state = {
-      portfolio: false
+      portfolio: false,
+      language: 'es'
     }
     Store.subscribe(() => {
-      this.setState({ portfolio: Store.getState().visible });
+      this.setState({ portfolio: Store.getState().visible, language: Store.getState().language });
     });
 
   };
@@ -154,7 +155,7 @@ class Header extends Component {
             </Link>
           </TextHeader>
           <Career>
-          <p>Ing de Sistemas y Computación</p>
+          <p>{ this.state.language === 'es'?"Ing de Sistemas y Computación": "Systems and Computer Engineering"}</p>
           </Career>
           <InfoDiv>
             <Info>
@@ -163,17 +164,21 @@ class Header extends Component {
             </Info>
             <Info>
               <li className="li-header"><a href={`https://${link}`}>{link}</a></li>
-              <li className="li-header" style={{ marginLeft: '24%'}}><a target="_blank" href="https://docs.wixstatic.com/ugd/e3f3f6_ab01c4f91ccf48bebf2d174d749dffdf.pdf" download>Descargar PDF</a></li>
+              <li className="li-header" style={{ marginLeft: '24%'}}><a target="_blank" href="https://docs.wixstatic.com/ugd/e3f3f6_ab01c4f91ccf48bebf2d174d749dffdf.pdf" download> PDF</a></li>
             </Info>
           </InfoDiv>
           <About portfolio = { this.state.portfolio }>
-            <h1>PORTAFOLIO</h1>
+            <h1>{this.state.language === 'es'? "PORTAFOLIO": "PORTFOLIO"}</h1>
             <p>
-                Soy estudiante, desarrollador web e
-                ingeniero de sistemas. Actualmente
-                estoy viviendo en Bogotá. Me interesa la
-                tecnología y la programación también
-                me gusta el fútbol y la música
+              {
+              this.state.language === 'es' ? 
+                'Soy estudiante, desarrollador web e ingeniero de sistemas. ' +
+                'Actualmente estoy viviendo en Bogotá. Me interesa la tecnología ' +
+                'y la programación también me gusta el fútbol y la música'
+                : 'I am a student, web developer, and software engineer currently ' +
+                  'living in Bogotá, Colombia. My interests range from technology to ' +
+                  'web development. I am also interested in programming, soccer, and music.'
+              } 
             </p>
           </About>
         </WrapperHeader>

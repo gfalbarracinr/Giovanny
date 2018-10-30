@@ -5,7 +5,8 @@
         "degree": {
             "career": "Ingeniería Sistemas",
             "description": "Actualmente estoy en 8 semestre, mi grado: Octubre del 2019"
-        }
+        },
+        "language": "es"
     },
 
     {
@@ -14,7 +15,8 @@
         "degree": {
             "career": "Bachillerato",
             "description": ""
-        }
+        },
+        "language": "es"
     },
 
     {
@@ -23,7 +25,37 @@
         "degree": {
             "career": "Primaria",
             "description": ""
-        }
+        },
+        "language": "es"
+    },
+    {
+        "year": "2013 - 2019",
+        "institution": "Universidad Nacional",
+        "degree": {
+            "career": "Systems and computer engineering",
+            "description": "I'm in the eighth semester and I'll finish my major in October of 2019"
+        },
+        "language": "en"
+    },
+
+    {
+        "year": "2007 - 2012",
+        "institution": "Agustiniano Norte School",
+        "degree": {
+            "career": "Secondary",
+            "description": ""
+        },
+        "language": "en"
+    },
+
+    {
+        "year": "2002 - 2007",
+        "institution": "Agustiniano Norte School",
+        "degree": {
+            "career": "Primary",
+            "description": ""
+        },
+        "language": "en"
     }
 
 

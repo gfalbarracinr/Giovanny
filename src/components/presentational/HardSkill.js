@@ -28,7 +28,7 @@ const HardSkill = (props) => {
     var finalArray = refactorArray(props.hardSkills)
     return (
         <Wrapper>
-            <Title title="HABILIDADES TÉCNICAS" width="30%" margin="5%" h="3"/>
+            <Title title={props.title} width="30%" margin="5%" h="3"/>
             <BubbleChart data = { finalArray }/>
         </Wrapper>
     );

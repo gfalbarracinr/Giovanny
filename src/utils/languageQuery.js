@@ -6,5 +6,6 @@ export const languageQuery = graphql`
             career
             description
         }
+        language
     }
 `

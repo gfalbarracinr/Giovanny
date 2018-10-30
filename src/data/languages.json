@@ -5,7 +5,8 @@
         "degree": {
             "career": "",
             "description": ""
-        }
+        },
+        "language": "es"
     },
 
     {
@@ -14,7 +15,27 @@
         "degree": {
             "career": "",
             "description": ""
-        }
+        },
+        "language": "es"
+    },
+    {
+        "year": "English",
+        "institution": "B2",
+        "degree": {
+            "career": "",
+            "description": ""
+        },
+        "language": "en"
+    },
+
+    {
+        "year": "Spanish",
+        "institution": "Native speaker",
+        "degree": {
+            "career": "",
+            "description": ""
+        },
+        "language": "en"
     }
 
 ]

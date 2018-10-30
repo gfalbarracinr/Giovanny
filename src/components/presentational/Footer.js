@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import FontAwesome from 'react-fontawesome';
 import { withRouter } from 'react-router-dom';
 import store from '../../store';
+import { setLanguage } from '../../actions';
 
 const Wrapper = styled.div`
   grid-area: footer;
@@ -53,6 +54,16 @@ const Link = styled.a`
     }
     
 `
+const Lang = styled.p`
+    &:hover{
+        color: black;
+    }
+    cursor: pointer;
+
+`
+const Lang1 = styled(Lang)`
+    margin-left: 5%;
+`
 class Footer extends Component {
     constructor(props){
         super(props);
@@ -64,10 +75,18 @@ class Footer extends Component {
             this.setState({ visible: store.getState().visible })
         })
     }
+    changeLanguage(lang){
+        store.dispatch(setLanguage(lang));
+    }
     render(){
         return (
             <Wrapper>
-                <Button onClick={() =>{ this.state.visible ? this.props.history.push('/') : this.props.history.push('/portfolio')} }> {this.state.visible ? 'Ver CV': 'Ver Portafolio'}</Button>
+                <Button onClick={() =>{ 
+                    this.state.visible ? this.props.history.push('/') 
+                    : this.props.history.push('/portfolio')} 
+                }> 
+                    {this.state.visible ? 'CV': 'Portafolio'}
+                </Button>
                 <Acknowledge>
                     <p>Giovanny Albarracín</p>
                     <Link href="https://twitter.com/GioAlbarracin">
@@ -79,6 +98,7 @@ class Footer extends Component {
                         />
                         Twitter
                     </Link>
+                    
                     <Link href="https://github.com/gfalbarracinr">
                         <FontAwesome
                             className="super-crazy-colors"
@@ -88,6 +108,8 @@ class Footer extends Component {
                         />
                         Github
                     </Link>
+                    <Lang1 onClick={()=>{ this.changeLanguage('en')}}>EN/</Lang1>
+                    <Lang onClick={()=>{ this.changeLanguage('es')}}>ES</Lang>
                 </Acknowledge>
             </Wrapper>
         );

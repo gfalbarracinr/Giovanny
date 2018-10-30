@@ -33,36 +33,52 @@ const Wrapper = styled.div`
 `
 
 class IndexPage extends Component  {
+  constructor(props){
+    super(props);
+    this.state ={
+      language: 'es'
+    }
+
+    store.subscribe(() => {
+      this.setState({ language: store.getState().language });
+    });
+  }
   componentDidMount(){
     store.dispatch(setHeader(false));
   }
+  
   render(){
     const { data } = this.props;
     const courses = data.allEducationJson.edges;
-
     const jobs = data.allExperienceJson.edges;
-    
     const softSkills = data.allSoftskillJson.edges;
-
     const hardSkills = data.allHardskillJson.edges;
-
     const lans = data.allLanguagesJson.edges;
-
+    console.log(this.state.language)
     return(
 
       <Wrapper>
         <Education 
-          courses = { courses }
+          courses = { courses.filter(lan => lan.node.language === this.state.language) }
+          title = {this.state.language === 'es'? 'EDUCACIÓN': 'EDUCATION'}
         />
 
         <Experience 
-          jobs = { jobs } 
+          jobs = { jobs.filter(lan => lan.node.language === this.state.language) } 
+          title = {this.state.language === 'es'? 'EXPERIENCIA': 'WORK EXPERIENCE'}
         />
 
-        <SoftSkill softSkills = { softSkills } />
-        <HardSkill hardSkills = { hardSkills }/>
+        <SoftSkill 
+          softSkills = { softSkills.filter(lan => lan.node.language === this.state.language) } 
+          title = {this.state.language === 'es'? 'HABILIDADES PERSONALES': 'SOFT SKILLS'}
+        />
+        <HardSkill 
+          hardSkills = { hardSkills }
+          title = {this.state.language === 'es'? 'HABILIDADES TÉCNICAS': 'HARD SKILLS'}
+        />
         <Languages
-          lans = { lans } 
+          lans = { lans.filter(lan => lan.node.language === this.state.language) }
+          title = {this.state.language === 'es'? 'IDIOMAS': 'LANGUAGES'} 
         />
         <Footer/>
       </Wrapper>

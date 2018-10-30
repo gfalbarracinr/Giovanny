@@ -28,12 +28,12 @@ const Skills = styled.div`
   padding-left: 10%;
 `
 
-const SoftSkill = ({ softSkills }) => {
+const SoftSkill = ({ softSkills, title }) => {
 
   return(
     <Wrapper>
       <Wrapp>
-        <Title title="HABILIDADES PERSONALES" width="30%" margin="5%" h="3"/>
+        <Title title={title} width="30%" margin="5%" h="3"/>
       </Wrapp>
       <Skills>
         {

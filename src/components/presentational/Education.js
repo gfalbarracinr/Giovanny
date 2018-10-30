@@ -20,12 +20,12 @@ const Wrapp = styled.div`
 `
 
 const Education = (props) =>{
-
-  const {courses} = props 
+  
+  const {courses, title} = props 
   return(
     <Wrapper>
       <Wrapp>
-        <Title title="EDUCACIÓN" h="2"/>
+        <Title title={title} h="2"/>
         <Item items={courses}/>
       </Wrapp>
     </Wrapper>

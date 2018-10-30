@@ -5,4 +5,9 @@ export const setHeader = (value) =>{
     }
 }
 
-
+export const setLanguage = (lan) =>{
+    return {
+        type: 'SET_LANGUAGE',
+        language: lan
+    }
+}
