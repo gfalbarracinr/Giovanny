@@ -20,11 +20,11 @@
     },
 
     {
-        "year": "-",
-        "institution": "Trabajos varios",
+        "year": "2019 - presente",
+        "institution": "SSA DIGI - Finlandia",
         "degree": {
-            "career": "Asistente",
-            "description": "He desempeñado diferente tipos de trabajos como asistente en empresas como: Ismocol o Latinproyectos"
+            "career": "Desarrollador web",
+            "description": "Desarrollador de software para la plataforma Cielo, tecnologías PHP y Symfony "
         },
         "language": "es"
     },
@@ -49,11 +49,11 @@
     },
 
     {
-        "year": "-",
-        "institution": "Other jobs",
+        "year": "2019 - now",
+        "institution": "SSA DIGI - Finland",
         "degree": {
-            "career": "Assistant",
-            "description": "I have worked in different types of jobs as an assistant in companies such as Ismocol or LatinProyectos."
+            "career": "Software Developer",
+            "description": "Software developer for the company's best product, Cielo. PHP and Symfony as a web framework."
         },
         "language": "en"
     }

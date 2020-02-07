@@ -17,26 +17,6 @@ const Wrapper = styled.div`
   align-self: end;
 `
 
-const Button = styled.button`
-  text-align: center;
-  margin-left: 45%;
-  background-color: black;
-  color: white;
-  border: 1px bisque white;
-  cursor: pointer;
-  width: 120px;
-  height: 30px;
-  border-radius:10px;
-
-  &:hover{
-      width:125px;
-      height: 35px;
-  }
-
-  @media(max-width: 500px){
-      margin-left: 35%;
-  }
-`
 const Acknowledge = styled.div`
   display: flex;
   margin-top: 5%;
@@ -81,12 +61,6 @@ class Footer extends Component {
     render(){
         return (
             <Wrapper>
-                <Button onClick={() =>{ 
-                    this.state.visible ? this.props.history.push('/') 
-                    : this.props.history.push('/portfolio')} 
-                }> 
-                    {this.state.visible ? 'CV': 'Portafolio'}
-                </Button>
                 <Acknowledge>
                     <p>Giovanny Albarracín</p>
                     <Link href="https://twitter.com/GioAlbarracin">
