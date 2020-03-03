@@ -10,17 +10,17 @@
     },
 
     {
-        "year": "2015 - 2017",
-        "institution": "AAIC SAS",
+        "year": "2018 - Presente",
+        "institution": "IEEE Unal",
         "degree": {
-            "career": "Digitador",
-            "description": "Encargado de digitar y criticar encuestas con herramientas Office. Vacacional"
+            "career": "Organizador Meetups",
+            "description": "Encargado de organizar y presentar meetups para la rama Computer Society de la IEEE UNAL"
         },
         "language": "es"
     },
 
     {
-        "year": "2019 - presente",
+        "year": "2019 - 2020",
         "institution": "SSA DIGI - Finlandia",
         "degree": {
             "career": "Desarrollador web",
@@ -39,11 +39,11 @@
     },
 
     {
-        "year": "2015 - 2017",
-        "institution": "AAIC SAS",
+        "year": "2018 - now",
+        "institution": "IEEE Unal",
         "degree": {
-            "career": "Data entry",
-            "description": "I had to digit and pass surveys to the computer with Microsoft Office tools. Sessional job"
+            "career": "Meetups manager",
+            "description": "I organize and host meetups for Computer Society chapter at IEEE UNAL"
         },
         "language": "en"
     },

@@ -18,6 +18,17 @@
         },
         "language": "es"
     },
+
+    {
+        "year": "Noruego",
+        "institution": "A1",
+        "degree": {
+            "career": "",
+            "description": ""
+        },
+        "language": "es"
+    },
+
     {
         "year": "English",
         "institution": "B2",
@@ -31,6 +42,16 @@
     {
         "year": "Spanish",
         "institution": "Native speaker",
+        "degree": {
+            "career": "",
+            "description": ""
+        },
+        "language": "en"
+    },
+
+    {
+        "year": "Norwegian",
+        "institution": "A1",
         "degree": {
             "career": "",
             "description": ""

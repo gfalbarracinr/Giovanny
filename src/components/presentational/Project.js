@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import image1 from '../../assets/white-page.png'
+import image1 from './../../assets/trackingapp.png'
 
 const Wrapper = styled.div`
   grid-area: main-project;

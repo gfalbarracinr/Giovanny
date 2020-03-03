@@ -10,20 +10,20 @@
     },
 
     {
-        "year": "2007 - 2012",
-        "institution": "Colegio Agustiniano Norte",
+        "year": "2019",
+        "institution": "Universidad de Bergen, Noruega",
         "degree": {
-            "career": "Bachillerato",
+            "career": "Intercambio académico",
             "description": ""
         },
         "language": "es"
     },
 
     {
-        "year": "2002 - 2007",
+        "year": "2002 - 2012",
         "institution": "Colegio Agustiniano Norte",
         "degree": {
-            "career": "Primaria",
+            "career": "Primaria y Bachillerato",
             "description": ""
         },
         "language": "es"
@@ -39,20 +39,20 @@
     },
 
     {
-        "year": "2007 - 2012",
-        "institution": "Agustiniano Norte School",
+        "year": "2019",
+        "institution": "University of Bergen, Norway",
         "degree": {
-            "career": "Secondary",
+            "career": "Exchange student",
             "description": ""
         },
         "language": "en"
     },
 
     {
-        "year": "2002 - 2007",
+        "year": "2002 - 2012",
         "institution": "Agustiniano Norte School",
         "degree": {
-            "career": "Primary",
+            "career": "Primary and secondary school",
             "description": ""
         },
         "language": "en"

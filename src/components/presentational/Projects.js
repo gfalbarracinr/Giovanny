@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import observatorio from '../../assets/odd.png'
-import bulldog from '../../assets/bdb.png'
 
 const Wrapper = styled.div`
   margin-bottom: 2.45rem;
@@ -51,14 +49,7 @@ const P = styled.p`
   color: white;
 `
 const selectImage = (image) =>{
-    switch(image) {
-        case 'bulldog':
-            return bulldog;
-        case 'observatorio':
-            return observatorio;
-        default:
-            return observatorio;
-    }
+    return  require(`./../../assets/${image}.png`);
 }
 const Projects = (props) => {
     var image = selectImage(props.image);
