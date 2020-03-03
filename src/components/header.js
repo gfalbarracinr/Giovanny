@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components';
 import Store from '../store';
+import pdfEn from '../assets/cv-en.pdf';
+import pdfEs from '../assets/cv-es.pdf'
 import '../styles/index.css';
 
 
@@ -136,15 +138,16 @@ class Header extends Component {
     super(props);
     this.state = {
       portfolio: false,
-      language: 'es'
+      language: 'es',
     }
     Store.subscribe(() => {
       this.setState({ portfolio: Store.getState().visible, language: Store.getState().language });
     });
-
   };
-  render(){
+
+  render() {
     const { name, image, link, cel, email } = this.props;
+    let pdf = this.state.language === 'es' ? pdfEs : pdfEn;
     return(
       <Wrapper>
         <WrapperHeader>
@@ -164,7 +167,7 @@ class Header extends Component {
             </Info>
             <Info>
               <li className="li-header"><a href={`https://${link}`}>{link}</a></li>
-              <li className="li-header" style={{ marginLeft: '24%'}}><a target="_blank" href="https://docs.wixstatic.com/ugd/e3f3f6_ab01c4f91ccf48bebf2d174d749dffdf.pdf" download> PDF</a></li>
+              <li className="li-header" style={{ marginLeft: '24%'}}><a target="_blank" href={pdf} download> PDF</a></li>
             </Info>
           </InfoDiv>
           <About portfolio = { this.state.portfolio }>
