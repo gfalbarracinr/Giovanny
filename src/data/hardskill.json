@@ -1,7 +1,7 @@
 [
     { 
-        "label": "JAVA",
-        "value": 9,
+        "label": "PHP",
+        "value": 7,
         "color": "#4AB3F4"
     },
     { 
@@ -25,8 +25,8 @@
         "color": "#4AB3F4"
     },
     { 
-        "label": "PHP",
-        "value": 2,
+        "label": "JAVA",
+        "value": 3,
         "color": "#4AB3F4"
     }
 ]

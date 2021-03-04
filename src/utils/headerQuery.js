@@ -3,7 +3,6 @@ export const headerQuery = graphql`
         siteMetadata{
         email
         name
-        image
         cel
         link
       }
