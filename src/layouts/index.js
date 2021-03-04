@@ -4,7 +4,7 @@ import Header from '../components/header'
 import styled from 'styled-components'
 import Helmet from 'react-helmet'
 import '../styles/index.css';
-import profilePic from '../../public/images/profile.jpg';
+import profilePic from '../data/images/profile.jpg';
 
 const Wrapper = styled.div`
   margin: 0 auto;
