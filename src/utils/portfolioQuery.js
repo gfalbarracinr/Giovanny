@@ -6,6 +6,7 @@ export const portfolioQuery = graphql`
             title
             text
             message
+            repo
         }
     }
 `
@@ -17,6 +18,7 @@ export const portfolioMainQuery = graphql`
             title
             text
             message
+            repo
         }
     }
 `

@@ -11,6 +11,7 @@ const Wrapper = styled.div`
   }
   & a{
     text-decoration: none;
+    display: grid;
   }
   @media (max-width: 850px) {
     width: 100%;
@@ -52,7 +53,8 @@ const selectImage = (image) =>{
     return  require(`./../../assets/${image}.png`);
 }
 const Projects = (props) => {
-    var image = selectImage(props.image);
+    const image = selectImage(props.image);
+    const {repo} = props;
     return (
         <Wrapper>
             <h2>{props.title}</h2>
@@ -63,6 +65,7 @@ const Projects = (props) => {
                 </Text>
             </Wrapp>
             </a>
+            {repo.length > 0 && <a target="_blank" href={props.repo}>Visit repo</a>}
         </Wrapper>
     );
 };

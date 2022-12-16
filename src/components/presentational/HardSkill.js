@@ -25,7 +25,7 @@ const refactorArray = (arr) =>{
     return aux;
 }
 const HardSkill = (props) => {
-    var finalArray = refactorArray(props.hardSkills)
+    const finalArray = refactorArray(props.hardSkills)
     return (
         <Wrapper>
             <Title title={props.title} width="30%" margin="5%" h="3"/>

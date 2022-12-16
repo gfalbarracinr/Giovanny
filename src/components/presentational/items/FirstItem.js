@@ -55,8 +55,6 @@ const Degree = styled.div`
             }
         }
     }
-    
-
     width:40%;
 `
 const Decoration = styled.div`

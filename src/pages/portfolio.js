@@ -42,13 +42,13 @@ class portfolio extends Component {
 
     render() {
         const data = this.props.data.allPortfolioJson.edges[0].node
-        console.log(data);
         return (
             <Wrapper>
                 <MainProject
                     url = { data.main.url }
                     title = { data.main.title }
                     text = { this.state.language === 'es' ? data.main.text : data.main.message }
+                    repo ={ data.main.repo}
                 />
                 <Div>
                     {
@@ -60,6 +60,7 @@ class portfolio extends Component {
                                 image={ project.image } 
                                 title={ project.title }
                                 text={ this.state.language === 'es' ? project.text : project.message }
+                                repo={project.repo}
                             />
                         ))
                     }

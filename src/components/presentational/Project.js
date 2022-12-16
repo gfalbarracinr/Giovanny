@@ -56,6 +56,7 @@ const Project = (props) => {
                 </Text>
             </Wrapp>
             </a>
+            {props.repo.length > 0 && <a target="_blank" href={props.repo}>Visit repo</a>}
         </Wrapper>
     );
 };

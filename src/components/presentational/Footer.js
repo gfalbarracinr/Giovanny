@@ -21,18 +21,22 @@ const Acknowledge = styled.div`
   display: flex;
   margin-top: 5%;
   font-size: 95%;
+  align-items: baseline;
+  justify-content: space-around;
   & > p {
         color: #868586;
   }
 `
 const Link = styled.a`
-    margin-left: auto; 
     text-decoration: none;
     color: #868586;
     &:hover{
         color: black;
-    }
-    
+    }   
+`
+const PortfolioLink = styled.button`
+    cursor: pointer;
+
 `
 class Footer extends Component {
     constructor(props){
@@ -45,11 +49,15 @@ class Footer extends Component {
             this.setState({ visible: store.getState().visible })
         })
     }
+    portfolioText = () => {
+        return this.state.language === 'es'? 'Visita mi portafolio': 'Visit my portfolio';
+    }  
     render(){
         return (
             <Wrapper>
                 <Acknowledge>
                     <p>Giovanny Albarracín</p>
+                    <PortfolioLink onClick={() => this.props.history.push('/portfolio')}>{this.portfolioText()}</PortfolioLink>
                     <Link href="https://twitter.com/GioAlbarracin">
                         <FontAwesome
                             className="super-crazy-colors"

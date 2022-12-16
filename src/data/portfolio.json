@@ -1,46 +1,53 @@
 [
     {
-        "projects":[   
-    
-            {
-                "url": "https://gfalbarracinr.github.io/Bulldogs-/",
-                "image": "bdb", 
-                "title": "Club Bulldogs Bogotá", 
-                "text": "Pagina web para el Club Bulldogs Bogotá, se puede observar la landing page (MockUp)",
-                "message": " The Website for Bulldogs bogota club, Mockup of the Landing page. "
-            },
-            
-            {
-                "url": "https://gfalbarracinr.github.io/observatorio/",
-                "image": "odd",
-                "title": "Observatorio De Diseño", 
-                "text": "Pagina web para el Observatorio de Diseño de la Universidad Nacional (MockUp)",
-                "message": "Website 'Observatorio de Diseño' for the Universidad Nacional (MockUp)"
-            },
-            
+        "projects":[              
             {
                 "url": "https://gfalbarracinr.github.io/saberyvida/",
                 "image": "saberyvida",
                 "title": "Saber y Vida - Universidad Nacional", 
                 "text": "Museo virtual del grupo sabeer y vida de la Universidad Nacional - sede Bogota",
-                "message": "Virtual museum of Saber y vida group - Universidad Nacional - Bogota branch"
+                "message": "Virtual museum of Saber y vida group - Universidad Nacional - Bogota branch",
+                "repo": "https://github.com/gfalbarracinr/saberyvida"
             },
-
             {
-                "url": "https://infinite-oasis-30084.herokuapp.com/",
-                "image": "reciclapp",
-                "title": "FedeSoft - Piensa digital", 
-                "text": "Aplicación movil para concientizar al uso del reciclaje en Bogota",
-                "message": "Mobile app to make aware people about recycling in Bogota"
+                "url": "https://jovial-fenglisu-644ae0.netlify.app/",
+                "image": "countries",
+                "title": "Countries", 
+                "text": "Frontend master reto para visualizar paises filtrar e info más detallada",
+                "message": "Frontend master challenge to preview list of all countries, their info and a filter search",
+                "repo": "https://github.com/gfalbarracinr/countries-rest"
+            },
+            {
+                "url": "/",
+                "image": "giovanny",
+                "title": "PortFolio", 
+                "text": "sitio web para mostrar mi CV y portafolio personal",
+                "message": "Website to show my CV and my personal projects",
+                "repo": "https://github.com/gfalbarracinr/Giovanny"
+            },
+            {
+                "url": "https://gfalbarracinr.github.io/advice-generator/",
+                "image": "advice-gen",
+                "title": "Advice Generator", 
+                "text": "Advice generator, reto para frontend mentor",
+                "message": "Advice generator, frontend mentor Challenge",
+                "repo": "https://github.com/gfalbarracinr/advice-generator"
+            },
+            {
+                "url": "https://gfalbarracinr.github.io/Bulldogs-/",
+                "image": "bdb", 
+                "title": "Club Bulldogs Bogotá", 
+                "text": "Pagina web para el Club Bulldogs Bogotá, se puede observar la landing page (MockUp)",
+                "message": " The Website for Bulldogs bogota club, Mockup of the Landing page.",
+                "repo": "https://github.com/gfalbarracinr/Bulldogs-"
             }
-    
         ],
-    
         "main":{
             "url": "https://trackingapp.netlify.com/",
             "title": "Tracking App", 
             "text": "App de seguimiento de gastos, el usuario puede escribir sus gastos en la app",
-            "message": "A trackin app, where the user can track their expenses pretty easy"
+            "message": "A trackin app, where the user can track their expenses pretty easy",
+            "repo": ""
         }
     }
 ]

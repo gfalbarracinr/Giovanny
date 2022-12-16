@@ -19,7 +19,7 @@ const Wrapper = styled.div`
   grid-template-rows: 1fr 1fr 0.8fr 0.2fr;
   grid-template-areas: "education experience"
                        "softSkill hardSkill"
-                       "languages languages"
+                       "languages language"
                        "footer footer";
   @media (max-width: 850px) {
     grid-template-areas: "education education"
@@ -27,8 +27,9 @@ const Wrapper = styled.div`
                          "softSkill softSkill"
                          "hardSkill hardSkill"
                          "languages languages"
+                         "portfolio"
                          "footer footer";
-    grid-template-rows:  1fr 1fr 1fr 1fr 0.8fr 0.2fr;
+    grid-template-rows:  1fr 1fr 1fr 1fr 0.8fr 0.2fr 0.2fr;
   }
 `
 
@@ -54,7 +55,6 @@ class IndexPage extends Component  {
     const softSkills = data.allSoftskillJson.edges;
     const hardSkills = data.allHardskillJson.edges;
     const lans = data.allLanguagesJson.edges;
-    console.log(this.state.language)
     return(
 
       <Wrapper>
