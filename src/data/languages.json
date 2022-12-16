@@ -1,7 +1,7 @@
 [
     {
         "year": "Inglés",
-        "institution": "Nivel: B2",
+        "institution": "Nivel: C1",
         "degree": {
             "career": "",
             "description": ""
@@ -20,18 +20,8 @@
     },
 
     {
-        "year": "Noruego",
-        "institution": "A1",
-        "degree": {
-            "career": "",
-            "description": ""
-        },
-        "language": "es"
-    },
-
-    {
         "year": "English",
-        "institution": "B2",
+        "institution": "C1",
         "degree": {
             "career": "",
             "description": ""
@@ -47,16 +37,5 @@
             "description": ""
         },
         "language": "en"
-    },
-
-    {
-        "year": "Norwegian",
-        "institution": "A1",
-        "degree": {
-            "career": "",
-            "description": ""
-        },
-        "language": "en"
     }
-
 ]

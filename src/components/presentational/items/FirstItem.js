@@ -62,7 +62,6 @@ const Degree = styled.div`
 const Decoration = styled.div`
     display: flex;
     flex-direction: column;
-    border-left: 1px solid #868586;
     height: 100px;
     margin-top: 4%;
     margin-right: 4%;

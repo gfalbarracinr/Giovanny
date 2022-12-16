@@ -1,0 +1,12 @@
+ [
+        { 
+            "lang": "es",
+            "text": "Desarrollador Full-Stack e ingeniero de sistemas. Actualmente estoy viviendo en Bogotá. Me interesa la tecnología y la programación",
+            "career": "Desarrollador Full-Stack"
+        },
+        { 
+            "lang": "en",
+            "text": "Information Technology Engineer & Full-Stack Developer. Interested in software architecture, programming, soccer, and music.",
+            "career": "Full-Stack Developer"
+        }
+]

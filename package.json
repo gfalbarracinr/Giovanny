@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "giovanny-albarracin-resume",
+  "description": "Giovanny Albaracin Resume",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Giovanny Albarracin",
   "dependencies": {
     "@material-ui/core": "^1.4.0",
     "@weknow/react-bubble-chart-d3": "^1.0.11",

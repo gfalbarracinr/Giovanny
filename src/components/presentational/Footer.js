@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import FontAwesome from 'react-fontawesome';
 import { withRouter } from 'react-router-dom';
 import store from '../../store';
-import { setLanguage } from '../../actions';
+import { LangSelector } from './LangSelector';
 
 const Wrapper = styled.div`
   grid-area: footer;
@@ -34,16 +34,6 @@ const Link = styled.a`
     }
     
 `
-const Lang = styled.p`
-    &:hover{
-        color: black;
-    }
-    cursor: pointer;
-
-`
-const Lang1 = styled(Lang)`
-    margin-left: 5%;
-`
 class Footer extends Component {
     constructor(props){
         super(props);
@@ -54,9 +44,6 @@ class Footer extends Component {
         store.subscribe(() =>{
             this.setState({ visible: store.getState().visible })
         })
-    }
-    changeLanguage(lang){
-        store.dispatch(setLanguage(lang));
     }
     render(){
         return (
@@ -82,8 +69,7 @@ class Footer extends Component {
                         />
                         Github
                     </Link>
-                    <Lang1 onClick={()=>{ this.changeLanguage('en')}}>EN/</Lang1>
-                    <Lang onClick={()=>{ this.changeLanguage('es')}}>ES</Lang>
+                    <LangSelector />
                 </Acknowledge>
             </Wrapper>
         );

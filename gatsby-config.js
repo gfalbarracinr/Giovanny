@@ -3,7 +3,7 @@ module.exports = {
     name: 'Giovanny Albarracín',
     cel: '(+57) 3057837243',
     email: 'albarracingiovanny@gmail.com',
-    link: 'about.me/giovannyalbarracin'
+    link: 'linkedin.com/in/albarracingiovanny'
   },
   plugins: [
     'gatsby-plugin-react-helmet',

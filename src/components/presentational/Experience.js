@@ -21,7 +21,6 @@ const Wrapp = styled.div`
 
 const Experience = (props) => {
       const {jobs, title} = props 
-      console.log(jobs)
       return(
         <Wrapper>
           <Wrapp>

@@ -20,18 +20,6 @@ const Instituition = styled.div`
         margin: 0;
     }
     width: 110px;
-
-    @-moz-document url-prefix() {
-        & {
-            font-size: 80%;
-        }
-        @media (max-width: 400px){
-            font-size: 75%;
-            & *{
-            font-size: 75%;
-            }
-        }
-    }
 `
 const Degree = styled.div`
     margin-left: 15%;
@@ -40,28 +28,10 @@ const Degree = styled.div`
         margin: 0;
     }
     width: 40%;
-    @media (max-width: 500px){
-        font-size: 80%;
-        & > p{
-            font-size: 80%;
-        }
-    }
-    @-moz-document url-prefix() {
-        & {
-            font-size: 80%;
-        }
-        @media (max-width: 400px){
-            font-size: 75%;
-            & *{
-            font-size: 75%;
-            }
-        }
-    }
 `
 const Decoration = styled.div`
     display: flex;
     flex-direction: column;
-    border-left: 1px solid #868586;
     height: 27px;
     margin-top: 0;
     margin-right: 4%;

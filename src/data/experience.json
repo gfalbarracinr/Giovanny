@@ -1,61 +1,58 @@
 [
     {
-        "year": "2014",
-        "institution": "Latinoamericana de Proyectos",
-        "degree": {
-            "career": "Asistente Contable",
-            "description": "Encargado del software de facturación contable HELISA Trabajo Vacacional"
-        },
-        "language": "es"
-    },
-
-    {
-        "year": "2018 - Presente",
+        "year": "01/2018 - 12/2018",
         "institution": "IEEE Unal",
-        "degree": {
-            "career": "Organizador Meetups",
-            "description": "Encargado de organizar y presentar meetups para la rama Computer Society de la IEEE UNAL"
-        },
-        "language": "es"
-    },
-
-    {
-        "year": "2019 - presente",
-        "institution": "SSA DIGI - Finlandia",
         "degree": {
             "career": "Desarrollador web",
-            "description": "Desarrollador de software para la plataforma Cielo, tecnologías PHP y Symfony "
+            "description": "Organicé charlas acerca de temas de tech donde discutimos temas como clean code, ing de software y buenas prácticas. Realicé un museo virtual con Phaser.js"
+        },
+        "language": "es"
+    },
+
+    {
+        "year": "08/2019 - 05/2022",
+        "institution": "SSA DIGI - Finlandia",
+        "degree": {
+            "career": "Desarrollador Full-Stack",
+            "description": "Full Stack developer, desarrollando, manteniendo y liderando herramientas de modelación 3d y configuración de producto."
         },
         "language": "es"
     },
     {
-        "year": "2014",
-        "institution": "Latinoamericana de Proyectos",
-        "degree": {
-            "career": "Accountancy assistant",
-            "description": "I was responsible for accountancy software HELISA. Sessional job"
-        },
-        "language": "en"
-    },
-
-    {
-        "year": "2018 - 2020",
-        "institution": "IEEE Unal",
-        "degree": {
-            "career": "Meetups manager",
-            "description": "I organize and host meetups for Computer Society chapter at IEEE UNAL"
-        },
-        "language": "en"
-    },
-
-    {
-        "year": "2019 - now",
-        "institution": "SSA DIGI - Finland",
+        "year": "05/2022 - 12/2022",
+        "institution": "EPAM",
         "degree": {
             "career": "Software Developer",
-            "description": "Software developer for the company's best product, Cielo. PHP and Symfony as a web framework."
+            "description": "Software developer y tech lead para un proyecto de gestión de citas médicas para una ONG en México, usando tecnologías como React JS, Typescript, Node Js, Github actions (CI/CD)"
+        },
+        "language": "es"
+    },
+    {
+        "year": "01/2018 - 12/2018",
+        "institution": "IEEE Unal",
+        "degree": {
+            "career": "Web Developer",
+            "description": "I Started the tech meetups where we discussed topics like clean code, software engineer and good practices. Made Virtual Museum with Phaser.js library over JS"
+        },
+        "language": "en"
+    },
+
+    {
+        "year": "08/2019 - 05/2022",
+        "institution": "SSA DIGI - Finlandia",
+        "degree": {
+            "career": "Full-Stack developer",
+            "description": "Worked in a consultancy IT company. Developing, maintaining, and leading 3d model and product configuration tools. PHP, Symfony, React, JS"
+        },
+        "language": "en"
+    },
+    {
+        "year": "05/2022 - 12/2022",
+        "institution": "EPAM",
+        "degree": {
+            "career": "Software Developer",
+            "description": "Software developer and tech lead for a healthcare appointments management tool for a NGO in Mexico, using technologies such as React JS, typescript, Node JS, Github-actions (CI/CD)"
         },
         "language": "en"
     }
-
 ]
